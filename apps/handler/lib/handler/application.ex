@@ -10,7 +10,7 @@ defmodule Handler.Application do
     children = [
       # Starts a worker by calling: Handler.Worker.start_link(arg)
       # {Handler.Worker, arg},
-      Handler.EventSupervisor
+      {Handler.EventSupervisor, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

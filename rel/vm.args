@@ -1,0 +1,5 @@
+## Node name
+-name ${NODE_NAME}@127.0.0.1
+
+## Node cookie, used for distribution
+-setcookie %R*!9m[]OXF(.@tj0RTb3.C*sQZMN`$;vqEIhR2yyzR_;`X.aeIyH7HRFZ6Gj(e4

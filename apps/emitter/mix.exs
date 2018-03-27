@@ -28,10 +28,9 @@ defmodule Emitter.MixProject do
     [
       {:commanded, "~> 0.15"},
       {:eventstore, "~> 0.13"},
-      {:commanded_eventstore_adapter, "~> 0.3"}
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
-      # {:sibling_app_in_umbrella, in_umbrella: true},
+      {:commanded_swarm_registry, "~> 0.1"},
+      {:commanded_eventstore_adapter, "~> 0.3"},
+      {:libcluster, "~> 2.1"}
     ]
   end
 end

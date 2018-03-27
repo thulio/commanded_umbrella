@@ -11,7 +11,7 @@ defmodule Handler.EventSupervisor do
 
   def init(:ok) do
     children = [
-      worker(Handler.EventHandler, [[start_from: :current]])
+      worker(Handler.EventHandler, [])
     ]
 
     supervise(children, strategy: :one_for_one)
