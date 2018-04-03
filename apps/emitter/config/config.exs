@@ -44,16 +44,18 @@ config :commanded, registry: Commanded.Registration.SwarmRegistry
 
 config :eventstore, registry: :distributed
 
+config :swarm, node_whitelist: [~r/node_1@.*/]
+
 config :libcluster,
   topologies: [
     example: [
       # The selected clustering strategy. Required.
       strategy: Cluster.Strategy.Epmd,
       # Configuration for the provided strategy. Optional.
-      config: [hosts: [:"node_1@127.0.0.1"]]
+      config: [hosts: [:"node_1@127.0.0.1", :"node_2@127.0.0.1"]],
       # The function to use for connecting nodes. The node
       # name will be appended to the argument list. Optional
-      # connect: {:net_kernel, :connect, []},
+      connect: {:net_kernel, :connect, []},
       # The function to use for disconnecting nodes. The node
       # name will be appended to the argument list. Optional
       # disconnect: {:net_kernel, :disconnect, []},

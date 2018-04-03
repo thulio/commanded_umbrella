@@ -5,10 +5,10 @@ defmodule Handler.MixProject do
     [
       app: :handler,
       version: "0.1.0",
-      build_path: "../../_build",
-      config_path: "../../config/config.exs",
-      deps_path: "../../deps",
-      lockfile: "../../mix.lock",
+      # build_path: "../../_build",
+      # config_path: "../../config/config.exs",
+      # deps_path: "../../deps",
+      # lockfile: "../../mix.lock",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -30,8 +30,9 @@ defmodule Handler.MixProject do
       {:eventstore, "~> 0.13"},
       {:commanded_eventstore_adapter, "~> 0.3"},
       {:commanded_swarm_registry, "~> 0.1"},
-      {:emitter, in_umbrella: true},
-      {:libcluster, "~> 2.1"}
+      {:emitter, path: "../emitter/", runtime: false},
+      {:libcluster, "~> 2.1"},
+      {:distillery, "~> 1.5", runtime: false}
     ]
   end
 end

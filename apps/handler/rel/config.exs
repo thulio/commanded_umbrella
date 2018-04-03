@@ -43,18 +43,6 @@ end
 # when running `mix release`, the first release in the file
 # will be used by default
 
-release :cmd_emitter do
-  set(version: "0.1.0")
-  set(vm_args: "rel/vm.args")
-
-  set(
-    applications: [
-      :runtime_tools,
-      emitter: :permanent
-    ]
-  )
-end
-
 release :cmd_handler do
   set(version: "0.1.0")
   set(vm_args: "rel/vm.args")
@@ -62,19 +50,6 @@ release :cmd_handler do
   set(
     applications: [
       :runtime_tools,
-      handler: :permanent
-    ]
-  )
-end
-
-release :cmd_umbrella do
-  set(version: "0.1.0")
-  set(vm_args: "rel/vm.args")
-
-  set(
-    applications: [
-      :runtime_tools,
-      emitter: :permanent,
       handler: :permanent
     ]
   )

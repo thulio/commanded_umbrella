@@ -8,7 +8,7 @@ defmodule Emitter.Aggregates.Aggregate do
     %AggregateCreated{id: command.id, payload: command.payload}
   end
 
-  def execute(%__MODULE__{} = _aggregate, %CreateAggregate{} = command) do
+  def execute(%__MODULE__{} = _aggregate, %CreateAggregate{} = _command) do
     {:error, :aggregate_already_created}
   end
 
